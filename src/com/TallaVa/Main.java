@@ -48,14 +48,32 @@ public class Main {
 
         //Test
     //koll om vilken tid som var snabbast
-    if(tid1 > tid2 && tid1 > tid3)
+    if(tid1 > tid2 && tid1 > tid3){
         System.out.println(name1 + " " + tid1);
-    else if (tid1 < tid2)
+    }
+
+    if (tid2 > tid1 && tid2 > tid3){
         System.out.println(name2 + " " + tid2);
+    }
+
+    if (tid3 > tid1 && tid3 > tid2){
+        System.out.println(name3 + " " + tid3);
+    }
+
    else
-       System.out.println("jag vet i fan");
+        System.out.println("fel värde . kör om programmet.");
 
 
         System.exit(0);
+
+        /* Testa det här om du hinner
+        if (a >= b)
+            if (a >= c) { max= a; if (b >= c) min= c; else min= b; }
+            else { max= c; min= b; }
+        else if (b >= c)
+        { max= b; if (a >= c) min= c; else min= a; }
+        else { max= c; if (a >= b) min= b; else min= a; }
+
+         */
     }
 }
