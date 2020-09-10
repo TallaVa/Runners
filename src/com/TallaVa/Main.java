@@ -47,7 +47,13 @@ public class Main {
                 keyboard.nextLine();
 
         //Test
-
+    //koll om vilken tid som var snabbast
+    if(tid1 > tid2 && tid1 > tid3)
+        System.out.println(name1 + " " + tid1);
+    else if (tid1 < tid2)
+        System.out.println(name2 + " " + tid2);
+   else
+       System.out.println("jag vet i fan");
 
 
         System.exit(0);
