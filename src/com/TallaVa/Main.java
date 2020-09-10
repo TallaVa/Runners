@@ -28,23 +28,23 @@ public class Main {
         keyboard.nextLine();
 
 
-        //Inläsning av andra löparens namn.
-        System.out.println("Skriv in den andre löparens namn: ");
-        name2 = keyboard.nextLine();
-        System.out.println("Vad hade han för tid ? ");
-        tid2 = keyboard.nextInt();
+            //Inläsning av andra löparens namn.
+            System.out.println("Skriv in den andre löparens namn: ");
+            name2 = keyboard.nextLine();
+            System.out.println("Vad hade han för tid ? ");
+            tid2 = keyboard.nextInt();
 
-        //Rensa nexLine
-        keyboard.nextLine();
+            //Rensa nexLine
+            keyboard.nextLine();
 
-        //Inläsning av tredje löparens namn.
-        System.out.println("Skriv in den tredje löparens namn: ");
-        name3 = keyboard.nextLine();
-        System.out.println("Vad hade han för tid ? ");
-        tid3 = keyboard.nextInt();
+                //Inläsning av tredje löparens namn.
+                System.out.println("Skriv in den tredje löparens namn: ");
+                name3 = keyboard.nextLine();
+                System.out.println("Vad hade han för tid ? ");
+                tid3 = keyboard.nextInt();
 
-        //Rensa nextLine
-        keyboard.nextLine();
+                //Rensa nextLine
+                keyboard.nextLine();
 
         //Test
 
