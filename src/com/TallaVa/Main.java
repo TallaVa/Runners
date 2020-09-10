@@ -1,4 +1,4 @@
-package com.TallaVa;
+package com.TallaVa.Runners.src.com.TallaVa;
 
 import java.util.Scanner;
 
@@ -30,7 +30,7 @@ public class Main {
         //Test
 
 
-        if (name1 < name2)
+        if (name1 == name2)
             System.out.println(name1);
 
         System.exit(0);
