@@ -10,6 +10,9 @@ public class Main {
         int tid1;
         int tid2;
         int tid3;
+        int min;
+        int mid;
+        int max = 0;
 
         String name1;   //Första löparens namn.
         String name2;   //Andra löparens namn.
@@ -48,32 +51,53 @@ public class Main {
 
         //Test
     //koll om vilken tid som var snabbast
-    if(tid1 > tid2 && tid1 > tid3){
-        System.out.println(name1 + " " + tid1);
-    }
+    if(tid1 > tid2 )
+        if (tid1 > tid3) {
+            max = tid1;
+            if (tid2 > tid3)
+                min = tid3;
+            mid = tid2;
+        }
+        else
+        {
+            min = tid2;
+            mid = tid3;
+        }
+    else
+        {
+            max = tid3;
+            mid = tid1;
+            min = tid2;
+        }
 
-    if (tid2 > tid1 && tid2 > tid3){
-        System.out.println(name2 + " " + tid2);
-    }
 
-    if (tid3 > tid1 && tid3 > tid2){
-        System.out.println(name3 + " " + tid3);
+    else if (tid2 > tid3)
+    {
+        max = tid2;
+        if (tid1 > tid3)
+            min = tid3;
+            mid = tid1;
     }
-
-   else
-        System.out.println("fel värde . kör om programmet.");
+        else
+        {
+            min = tid1;
+            mid = tid3;
+        }
+    if (tid1 > tid2)
+    {
+            min = tid2;
+            mid = tid1;
+        System.out.println(min + mid + max);
+    }
+        else
+        {
+            min = tid1;
+            mid = tid2;
+            System.out.println(min + mid + max);
+        }
 
 
         System.exit(0);
 
-        /* Testa det här om du hinner
-        if (a >= b)
-            if (a >= c) { max= a; if (b >= c) min= c; else min= b; }
-            else { max= c; min= b; }
-        else if (b >= c)
-        { max= b; if (a >= c) min= c; else min= a; }
-        else { max= c; if (a >= b) min= b; else min= a; }
-
-         */
     }
 }
