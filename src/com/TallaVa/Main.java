@@ -5,14 +5,11 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-// Variablerna
+        // Variablerna
 
         int tid1;
         int tid2;
         int tid3;
-        int min;
-        int mid;
-        int max = 0;
 
         String name1;   //Första löparens namn.
         String name2;   //Andra löparens namn.
@@ -46,58 +43,31 @@ public class Main {
                 System.out.println("Vad hade han för tid ? ");
                 tid3 = keyboard.nextInt();
 
-                //Rensa nextLine
-                keyboard.nextLine();
 
         //Test
-    //koll om vilken tid som var snabbast
-    if(tid1 > tid2 )
-        if (tid1 > tid3) {
-            max = tid1;
-            if (tid2 > tid3)
+        //koll om vilken tid som var snabbast
+        int min, max, minne;
+
+        if (tid1>tid2) { minne = tid1; min = tid2;}     //Tid 1 mäts mot tid2
+
+        else { minne = tid2; min = tid1;}               //Den tiden som är minst sätts i minne
+
+        if (minne>tid3) {                               //
+            max = minne;
+            if (min > tid3) {
+                minne = min;
                 min = tid3;
-            mid = tid2;
+            } else { minne = tid3;
+
+            }
         }
-        else
-        {
-            min = tid2;
-            mid = tid3;
-        }
-    else
-        {
-            max = tid3;
-            mid = tid1;
-            min = tid2;
-        }
+        else max = tid3;
+
+        System.out.println("minst: "+ min + " mellan: "+ minne + " och snabbast: "+  max );
 
 
-    else if (tid2 > tid3)
-    {
-        max = tid2;
-        if (tid1 > tid3)
-            min = tid3;
-            mid = tid1;
-    }
-        else
-        {
-            min = tid1;
-            mid = tid3;
-        }
-    if (tid1 > tid2)
-    {
-            min = tid2;
-            mid = tid1;
-        System.out.println(min + mid + max);
-    }
-        else
-        {
-            min = tid1;
-            mid = tid2;
-            System.out.println(min + mid + max);
-        }
 
-
-        System.exit(0);
+    System.exit(0);
 
     }
 }
