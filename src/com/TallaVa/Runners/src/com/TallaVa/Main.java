@@ -69,26 +69,33 @@ public class Main {
         else sist = tid3;
 
         //Sortering av namn efter snabbast tid
-        int minne2;
+
         if (sist == tid1 && minne == tid2 && forst == tid3) {
-            System.out.println("Först: " + name3 + " Andra: " + name2 + " Sist: " + name1);
+            System.out.println("Först: " + name3 + "\nAndra: " + name2 + "\nSist: " + name1);
         }
         else if (sist == tid1 && minne == tid3 && forst ==tid2)
         {
-            System.out.println("Först: " + name2 + " Andra: " + name3 + " Sist: " + name1);
+            System.out.println("Först: " + name2 + "\nAndra: " + name3 + "\nSist: " + name1);
         }
         else if (sist == tid3 && minne == tid1 && forst ==tid2)
         {
-            System.out.println("Först: " + name2 + " Andra: " + name1 + " Sist: " + name3);
+            System.out.println("Först: " + name2 + "\nAndra: " + name1 + "\nSist: " + name3);
         }
         else if (sist == tid2 && minne == tid1 && forst ==tid3)
         {
-            System.out.println("Först: " + name2 + " Andra: " + name1 + " Sist: " + name3);
+            System.out.println("Först: " + name3 + "\nAndra: " + name1 + "\nSist: " + name2);
+        }
+        else if (sist == tid2 && minne == tid3 && forst ==tid1)
+        {
+            System.out.println("Först: " + name1 + "\nAndra: " + name3 + "\nSist: " + name2);
+        }
+        else if (sist == tid3 && minne == tid2 && forst ==tid1)
+        {
+            System.out.println("Först: " + name1 + "\nAndra: " + name2 + "\nSist: " + name3);
         }
 
 
-
-        System.out.println("minst: "+ forst + " mellan: "+ minne + " och snabbast: "+  sist );
+        System.out.println("Här nedan finns deras tiderna. snabbast till slöast: \n"+ forst + "\n"+ minne + "\n"+  sist );
 
 
 
