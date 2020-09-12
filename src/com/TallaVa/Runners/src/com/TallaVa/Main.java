@@ -46,24 +46,51 @@ public class Main {
 
         //Test
         //koll om vilken tid som var snabbast
-        int min, max, minne;
+        int forst, sist, minne;
 
-        if (tid1>tid2) { minne = tid1; min = tid2;}     //Tid 1 mäts mot tid2
+        if (tid1>tid2) {
+            minne = tid1; forst = tid2;                   //tid1 mäts mot tid2
+        }
 
-        else { minne = tid2; min = tid1;}               //Den tiden som är minst sätts i minne
+        else {
+                minne = tid2; forst = tid1;               //Den tiden som är minst sätts i minne
+            }
 
-        if (minne>tid3) {                               //
-            max = minne;
-            if (min > tid3) {
-                minne = min;
-                min = tid3;
-            } else { minne = tid3;
-
+        if (minne>tid3){
+            sist = minne;
+            if (forst > tid3) {
+                minne = forst;
+                forst = tid3;
+            }
+            else {
+                minne = tid3;
             }
         }
-        else max = tid3;
+        else sist = tid3;
 
-        System.out.println("minst: "+ min + " mellan: "+ minne + " och snabbast: "+  max );
+        //Sortering av namn efter snabbast tid
+        int minne2;
+        if (sist == tid1 && minne == tid2 && forst == tid3) {
+            System.out.println("Först: " + name3 + " Andra: " + name2 + " Sist: " + name1);
+        }
+        else if (sist == tid1 && minne == tid3 && forst ==tid2)
+        {
+            System.out.println("Först: " + name2 + " Andra: " + name3 + " Sist: " + name1);
+        }
+        else if (sist == tid3 && minne == tid1 && forst ==tid2)
+        {
+            System.out.println("Först: " + name2 + " Andra: " + name1 + " Sist: " + name3);
+        }
+        else if (sist == tid2 && minne == tid1 && forst ==tid3)
+        {
+            System.out.println("Först: " + name2 + " Andra: " + name1 + " Sist: " + name3);
+        }
+
+
+
+        System.out.println("minst: "+ forst + " mellan: "+ minne + " och snabbast: "+  sist );
+
+
 
 
 
